@@ -50,16 +50,18 @@ function employeeTracker() {
       type: "list",
       name: "option",
       choices: [
-        "View all roles",
+        
         "Add role",
-        "Update employee role",
-        "View all departments",
-        "Add department",
-        "View all employees",
-        "Add employee",
+        "View all roles",
         "Remove Employee",
-        "Remove role",
+        "Add department",
+        "View all departments",
         "Remove department",
+        "Add employee",
+    "View all employees",
+        "Update employee role",
+        "Remove role",
+       
         "Done"
       ],
       })
@@ -185,13 +187,14 @@ function removeEmployee(){
     inquirer.prompt ([ 
       {
         type: "input", 
-        message: "Which employee would you like to delete?",
+        message: "Which employee would you like to delete? Please, enter first_name or last name!",
         name: "employee",
        },
     ])
-    .then (function(res){
-      connection.query("DELETE FROM ouremployees WHERE concat(first_name, last_name, ourrole_id, ourmanager_id)", [res.employee],
-          function(err, res) {
+    .then (function(outcome){
+        console.log(outcome);
+      connection.query("DELETE FROM ouremployees WHERE (first_name=? or last_name=?)", [outcome.employee, outcome.employee],
+          function(err, outcome) {
           if (err) throw err;
           console.log( "Employee deleted!\n");
           employeeTracker()
@@ -203,13 +206,13 @@ function removeEmployee(){
         inquirer.prompt ([ 
           {
             type: "input", 
-            message: "Which employee would you like to delete?",
+            message: "Which employee would you like to delete? Please, enter department name!",
             name: "department",
            },
         ])
-        .then (function(res){
-         connection.query(`DELETE FROM ourdepartments WHERE concat(name) = '${res.employee}'`,
-          function(err, res) {
+        .then (function(outcome){
+         connection.query("DELETE FROM ourdepartments WHERE (name=?)", [outcome.department],
+          function(err, outcome) {
               if (err) throw err;
               console.log( "Department deleted!\n");
               employeeTracker()
@@ -222,13 +225,13 @@ function  removerole(){
     inquirer.prompt ([ 
       {
         type: "input", 
-        message: "Which role would you like to delete?",
+        message: "Which role would you like to delete? Please, enter role!",
         name: "role",
        },
     ])
-    .then (function(res){
-      connection.query(`DELETE FROM ourrole (title, salary, ourdepartments_id) = '${res.role}'`,
-          function(err, res) {
+    .then (function(outcome){
+      connection.query("DELETE FROM ourrole WHERE (title=?)" , [outcome.role],
+          function(err, outcome) {
           if (err) throw err;
           console.log( "role deleted!\n");
           employeeTracker()
@@ -293,7 +296,7 @@ function insertemployee() {
       
       connection.query("INSERT INTO ouremployees (first_name, last_name, ourrole_id, ourmanager_id) VALUES (?, ?, ?, ?)", [outcome.First_Name, outcome.Last_Name, outcome.roleID, outcome.managerID], function(err, res) {
         if (err) throw err;
-        console.table(res);
+        console.table(outcome);
         employeeTracker();
       });
     });
@@ -324,9 +327,9 @@ function updateemployee() {
     .then(function(outcome) {
        
 
-     connection.query('UPDATE ouremployees SET ourrole_id=? WHERE first_name= ?',[outcome.updateemployeerole, outcome.updateemployee],function(err, res) {
+     connection.query('UPDATE ouremployees SET ourrole_id=? WHERE first_name= ?',[outcome.updateemployeerole, outcome.updateemployee],function(err, outcome) {
         if (err) throw err;
-        console.table(res);
+        console.table(outcome);
         employeeTracker();
       });
     });

@@ -17,7 +17,6 @@ CREATE TABLE ourrole (
 
 CREATE TABLE ouremployees (          
       PRIMARY KEY(id),
-      FOREIGN KEY (ourmanager_id) REFERENCES ouremployees(id) ON DELETE CASCADE,
       FOREIGN kEY (ourrole_id) REFERENCES ourrole(id) ON DELETE CASCADE,
       ourrole_id INT NOT NULL,             
       ourmanager_id INT,                   

@@ -13,7 +13,7 @@
 
   *The what, why, and how:* 
   
-  🔍 Employee Tracker is a CLI applicaiton for building and maintaining companies employee data base. Built on MySQL and leveraging modularity in the structure of Employee Tracker, it can scale appropriatley with a companies growth without reconfiguring the core structure of the internal employee data base. This application can act as a foundation to continue to build upon. Employee allows managers or someone within the company to view all employees, roles, as well as departments. It also allows for adding employees, roles, departments and updating employees all from your CLI.
+  🔍 A CLI content management system for managing a company's employees using node, inquirer, and MySQL. Employee Tracker is a CLI applicaiton for building and maintaining companies employee data base. Built on MySQL and leveraging modularity in the structure of Employee Tracker, it can scale appropriatley with a companies growth without reconfiguring the core structure of the internal employee data base. This application allows the user to insert new data such as departments, roles, employees to data base.  In addition, user can view, update and delete company's data on all departments, role and employees that we install in data base.   
 
  *Check out the [ExampleREADME.md](https://github.com/emilychhun/employee-tracker/blob/main/README.md) as an example.*
   <br />
