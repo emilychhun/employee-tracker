@@ -15,7 +15,7 @@
   
   🔍 This is a software engineering team generator command line application. Users are prompted for information about the team manager and team members. Since testing is a key piece in making code maintainable, I have ensured all unit tests passed.
 
- *Check out the [ExampleREADME.md](https://github.com/emilychhun/teamprofilegenerator/blob/main/README.md) as an example.*
+ *Check out the [ExampleREADME.md](https://github.com/emilychhun/employee-tracker/blob/main/README.md) as an example.*
   <br />
  
   ## Table of contents
@@ -34,9 +34,11 @@
   *Steps required to install project and how to get the development environment running:*
   
 💽💽 1.Run npm install to install all dependencies.
+  <br />
       2.Run schema.sql in MySQLWorkbench.  (Optional) Run seeds.sql in MySQLWorkbench.
+  <br />
       3.Edit MySQL connection properties in the connectionProperties object in index.js
-<br />
+  <br />
   
   
   ## Usage
