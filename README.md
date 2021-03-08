@@ -33,8 +33,9 @@
 
   *Steps required to install project and how to get the development environment running:*
   
-💽💽 In order to use the application, first the user will need to have node.js installed. Then, user will need to clone the repository into the command line. Once the repository has been cloned, the user will need to change directories into the repository and run the command "npm install" in order to retrieve the neccessary dependencies.
-
+💽💽 1.Run npm install to install all dependencies.
+      2.Run schema.sql in MySQLWorkbench.  (Optional) Run seeds.sql in MySQLWorkbench.
+      3.Edit MySQL connection properties in the connectionProperties object in index.js
 <br />
   
   
@@ -80,7 +81,7 @@
   Email me with any questions: emily_chhun23@yahoo.com
   <br />
 
-  repo link: [readme-repo-link](https://github.com/emilychhun/teamprofilegenerator)
+  repo link: [readme-repo-link](https://github.com/emilychhun/employee-tracker)
   
   <br />
   
