@@ -41,14 +41,14 @@
   <br />
   
   
-  ## Usage
+  ## Tech Used
   *Instructions and examples for use:*
-  
-  📚 In order to run this application, This application is run in your terminal following a prompt a questions and choosing your team.
-  
-  *Demo*
+ 1.  Node
+ 2. Express
+ 3. MySQL
+ 4. Sequelize
+ 5. Dotenv
 
-  View a demonstration of the application:
   <br />
   
  ![alt text](https://github.com/emilychhun/employee-tracker/blob/main/employee-tracker.gif "Logo Title Text 1")
