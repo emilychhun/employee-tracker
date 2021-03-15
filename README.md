@@ -43,7 +43,7 @@
   
   ## Tech Used
   *Instructions and examples for use:*
- 1.  Node
+ 1. Node
  2. Express
  3. MySQL
  4. Sequelize
